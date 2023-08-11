@@ -127,6 +127,15 @@ p
     min-height: 100vh
     padding-bottom: 150px
     color: #fff
+.plans-page 
+    height: 100%
+    width: 680px
+    max-width: 100%
+    margin-left: auto 
+    margin-right: auto
+    position: relative
+    min-height: 100vh
+    padding-bottom: 150px
 .premium__header
     text-align: center
     padding-top: 24px 
@@ -194,8 +203,6 @@ p
     padding: 20px 5px
     cursor: pointer
 .plans-slider
-    display: flex
-    overflow-x: auto
     .slick-list 
         padding-top: 20px
 .pans-slider__item
@@ -250,11 +257,148 @@ p
     left: 50% 
     transform: translateX(-50%)
     width: 640px
-
-
-
 //end premium page style
 
+//start premium tabs 
+.premium-tabs
+    width: 100% 
+    border-bottom: 1px solid rgba(#fff, 0.7)
+    margin-bottom: 15px
+    display: flex
+.premium-tab
+    text-align: center 
+    padding: 15px 0
+    width: 50%
+    font-size: 20px
+    cursor: pointer
+.premium-tab.active 
+    font-weight: 500
+    border-bottom: 1px solid #fff
+//end premium tabs 
+// .premium__header span.active 
+//    display: none
+.premium-tab__item
+    display: none 
+.premium-tab__item:first-child
+    display: block
+
+
+.slider-for__item
+    padding: 10px
+.slider-for__item-wrapper
+    background: red 
+    height: 200px
+    border-radius: 15px
+.slider-nav__item
+    padding: 10px
+
+.slider-for__item-wrapper
+    background: linear-gradient(180deg, rgba(#8A14F5, 0.7) 0%, rgba(#017DF8, 0.7) 100%)
+    text-align: center 
+    display: flex 
+    flex-direction: column 
+    align-items: center 
+    justify-content: center
+.premium-plus-title
+    background: linear-gradient(300deg, #FBE8BE 0%, #FBE8BE 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 700 
+    font-size: 20px
+    display: flex 
+    align-items: center
+    margin-bottom: 5px
+    img 
+        width: 18px
+        margin-right: 5px
+.premium-plus-title--white
+    background: #fff
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    color: #fff
+
+.premium-plus-text
+    background: linear-gradient(50deg, #FBE8BE 0%, #FBE8BE 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 700 
+    font-size: 14px
+    display: flex 
+    align-items: center
+.premium-plus-text--white
+    background: #fff
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    color: #fff
+.slider-for__item-wrapper--plus
+    background: linear-gradient(180deg, #017DF8 0%, #8A14F5 100%)
+.plans-button
+    width: 270px
+    border-radius: 50px
+    background: linear-gradient(180deg, #FBE8BE 0%, #DFBC77 75.31%)
+    height: 40px 
+    text-decoration: none 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    color: #000
+    margin-top: 15px
+.plans-button--blue
+    background: rgba(#017DF8, .8)
+    color: #fff
+.slider-nav__header
+    display: flex 
+    justify-content: space-between
+    padding-bottom: 15px
+    border-bottom: 2px solid #E2E1E3
+.slider-nav__tabs
+    display: flex
+.slider-nav__tab
+    margin-left: 18px
+    opacity: 0.5
+    font-weight: 600
+
+.slider-nav__tab.active
+    opacity: 1
+.slider-nav__header-title
+    color: #969596  
+.plan-feature
+    padding-top: 20px 
+    padding-bottom: 20px
+    border-bottom: 2px dashed #e2e1e3
+    display: flex 
+    align-items: center
+    display: flex 
+    justify-content: space-between
+.plan-feature__icon-wrapper
+    border-radius: 50% 
+    background: linear-gradient(180deg, #017DF8 0%, #8A14F5 100%)
+    min-width: 40px 
+    height: 40px
+    display: flex 
+    justify-content: center 
+    align-items: center
+    margin-right: 12px
+    img 
+        max-width: 55%
+        max-height: 55%
+.plan-feature__wrapper
+    display: flex 
+    align-items: center
+.tick-wrapper
+    display: flex
+    .tick:first-child
+        width: 100px 
+        display: flex 
+        justify-content: center
+    .tick:nth-child(2)
+        width: 40px 
+        display: flex 
+        justify-content: center
 @import "media"
 
 
