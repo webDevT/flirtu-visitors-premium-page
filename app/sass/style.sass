@@ -118,7 +118,7 @@ p
 //start premium page style
 .premium-page 
     height: 100%
-    background: linear-gradient(180deg, #017DF8 0%, #8A14F5 100%)
+    background: linear-gradient(180deg, #0061C1 0%, #6310AE 100%)
     width: 680px
     max-width: 100%
     margin-left: auto 
@@ -144,7 +144,7 @@ p
     font-weight: 500
     .container 
         position: relative
-        img 
+        svg
             position: absolute 
             top: 50% 
             left: 24px
@@ -199,7 +199,7 @@ p
     width: 170px  
     height: 250px
     border-radius: 10px
-    background: rgba(1, 125, 248, 0.60)
+    background: rgba(#0061C1, 0.60)
     padding: 20px 5px
     cursor: pointer
 .plans-slider
@@ -219,6 +219,9 @@ p
     min-height: 25px
 .price
     font-size: 26px
+    font-weight: 700
+    span 
+        font-weight: 400
 .price-per-month
     opacity: 0.5
 .prev-price
@@ -308,7 +311,7 @@ p
     font-size: 20px
     display: flex 
     align-items: center
-    margin-bottom: 5px
+    margin-bottom: 10px
     img 
         width: 18px
         margin-right: 5px
@@ -461,7 +464,48 @@ swiper-slide
         width: 30%
 .plans-slider-wrapper
     padding-left: 24px
+.premium__header
+    svg 
+        fill: #fff
+.premium-page.active 
+    background: red
+    background: #fff
+    color: #000
+    .premium-tabs
+        border-color: $green
+    .premium-tab.active
+        border-color: $green
+    .plan-item
+        border: 2px solid #d8d8d8
+        background: #fff
+    .plan-item.active 
+        border-color: $green
+    .option__text 
+        color: rgba(#000, .6)
+    .button--gold
+        background: $green
+        color: #fff
+    .plan-item__label
+        background: $green 
+        color: #fff
+    .slick-dots button 
+        border: 1px solid $green
+    .slick-dots .slick-active button
+        background: $green
+        border: 1px solid $green
+    .option-icon 
+        background: $green
+    .premium__header
+        svg 
+            fill: #7F7F7F
+    .note a,
+    .note a:hover
+        color: #000
+.premium-page .premium-tab.active
+    font-weight: 700
+
 @import "media"
+
 
 
 
