@@ -504,6 +504,305 @@ swiper-slide
     font-weight: 700
 .button--gold
     z-index: 999
+
+//start nearby page style
+.nearby__header
+    .container
+        display: flex 
+        justify-content: space-between
+.nearby__header
+    padding-top: 25px 
+    padding-bottom: 25px
+.nearby__title
+    font-size: 20px 
+    font-weight: 700
+    color: $blue
+.nearby__buttons
+    display: flex 
+    align-items: center
+.priority__button
+    display: flex 
+    align-items: center
+    img 
+        width: 28px
+.chat__button
+    display: flex
+    align-items: center
+    background: linear-gradient(180deg, #8A14F5 23.57%, #017DF8 186.94%)
+    border-radius: 50px
+    padding: 5px 10px
+    img 
+        width: 20px
+.chat-button-value
+    color: #FBE8BE
+    margin-left: 5px
+.nearby__button
+    margin-left: 15px
+    display: flex 
+    align-items: center
+    cursor: pointer
+.nearby__list
+    display: flex 
+    flex-wrap: wrap
+.nearby__col
+    width: 33.33333333%
+    padding: 0px 10px
+.nearby__photo
+    width: 100%
+    height: 220px 
+    object-fit: cover 
+    object-position: center
+    border-radius: 15px
+.nearby__item
+    margin-bottom: 30px
+.nearby__item-name
+    font-weight: 600
+    margin-bottom: 2px
+.nearby__item-distance 
+    color: #656465
+.online-indect
+    width: 10px 
+    height: 10px 
+    border-radius: 50%
+    background: #45904D
+    display: inline-block
+    margin-left: 5px
+//end nearby page style
+
+//start extra modal 
+.extra-modal
+    position: fixed 
+    top: 0 
+    left: 0  
+    z-index: 999
+    width: 100%
+    height: 100%
+    background: rgba(#000, 0.8)
+    display: none
+    overflow: hidden
+.extra-moda__wrapper
+    background: #fff
+    padding-top: 35px 
+    padding-bottom: 30px
+    border-top-left-radius: 30px 
+    border-top-right-radius: 30px
+    position: absolute 
+    bottom: 0 
+    left: 50%
+    transform: translateY(100%) translateX(-50%)
+    transition: all 1s
+
+.extra-moda__wrapper.active
+    transform: translateY(0%) translateX(-50%)
+.extra-modal__icon
+    background: rgba($blue, 0.3)
+    border-radius: 50%
+    width: 50px 
+    height: 50px 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    img 
+        max-width: 60% 
+        max-height: 60%
+.extra-modal__title
+    font-size: 20px
+    font-weight: 600
+    margin-top: 10px
+    margin-bottom: 5px
+.extra-modal__text
+    color: rgba(#000, .5 )
+    font-size: 14px
+    margin-bottom: 20px
+.button--blue 
+    border-radius: 50px
+    width: 100%
+    font-size: 15px
+    height: 50px
+.or-wrapper
+    position: relative 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    margin-top: 20px 
+    margin-bottom: 20px
+    .or 
+        background: #F1F1F1
+        color: #5F5F5F
+        position: relative
+        z-index: 9
+        padding-left: 10px 
+        padding-right: 10px 
+        border-radius: 30px
+        display: flex 
+        justify-content: center 
+        align-items: center
+        line-height: 1
+        padding-top: 4px 
+        padding-bottom: 3px
+        font-size: 14px
+.or-line 
+    width: 100% 
+    height: 1px 
+    background: #F1F1F1
+    position: absolute 
+    top: 50% 
+    left: 0
+    transform: translateY(-50%)
+.button--purple
+    border-radius: 50px 
+    background: #3906a4
+    font-size: 15px 
+    height: auto
+    color: #fff 
+    padding-top: 15px 
+    padding-bottom: 15px
+    text-align: center
+    flex-direction: column
+    color: #FBE8BE
+    span 
+        font-size: 11px
+.maybe-leter
+    text-align: center 
+    color: $blue
+    font-weight: 600 
+    margin-top: 30px
+    font-size: 14px
+    cursor: po
+//end extra modal 
+
+//start filter modal 
+.filter-modal-row
+    display: flex 
+    justify-content: space-between
+    font-weight: 600
+    padding-bottom: 15px
+    padding-top: 15px
+    border-bottom: 1px solid $grey
+.filter-modal-row__button 
+    display: flex 
+    align-items: center
+    img 
+        display: flex 
+        margin-left: 8px
+        height: 15px
+.filter-modal-row__title
+    color: #000
+.filter-header
+    display: flex 
+    justify-content: flex-end
+    margin-bottom: 10px
+.close-modal
+    cursor: pointer 
+    width: 20px
+.gender-modal-wrapper
+    background: #fff
+    position: fixed 
+    bottom: 0 
+    left: 50% 
+    width: 100%
+    padding-top: 35px 
+    padding-bottom: 30px
+    border-top-left-radius: 30px 
+    border-top-right-radius: 30px
+    transform: translateX(-50%) translateY(100%)
+    transition: all .5s
+.gender-modal-wrapper.active 
+    transform: translateX(-50%) translateY(0%)
+.sub-modal-header
+    text-align: center
+    margin-bottom: 20px
+.sub-modal-title
+    font-size: 20px 
+    font-weight: 700
+    margin-bottom: 10px
+.radio-wrapper
+    width: 100% 
+    display: flex 
+    justify-content: space-between 
+    align-items: center
+    
+    margin-bottom: 8px
+    
+    label 
+        width: 100% 
+        height: 100%
+        padding-top: 15px 
+        padding-bottom: 15px
+        padding-left: 20px
+        padding-right: 20px
+        font-size: 14px 
+        font-weight: 700
+        background: rgba($grey, 0.3)
+        border-radius: 30px
+        display: flex 
+        justify-content: space-between 
+        align-items: center
+    input 
+        display: none
+.radio-label
+    width: 20px 
+    height: 20px 
+    background: transparent
+    border: 2px solid rgba(#000, .5)
+    border-radius: 50%
+    img 
+        display: none
+.radio:checked + label 
+    background: rgba($blue, 0.2)
+    .radio-label 
+        background: $blue
+        border-color: $blue
+        display: flex 
+        justify-content: center 
+        align-items: center
+        img 
+            max-width: 70%
+            max-height: 60%
+            display: block
+.save-button
+    margin-top: 20px
+.age-modal-wrapper
+    background: #fff
+    position: fixed 
+    bottom: 0 
+    left: 50% 
+    width: 100%
+    padding-top: 35px 
+    padding-bottom: 30px
+    border-top-left-radius: 30px 
+    border-top-right-radius: 30px
+    transform: translateX(-50%) translateY(100%)
+    transition: all .5s
+.age-modal-wrapper.active 
+    transform: translateX(-50%) translateY(0%)
+.age-selects-row
+    display: flex 
+    justify-content: space-between
+.select-wrapper
+    width: 48%
+    label 
+        display: block
+        font-weight: 700
+        font-size: 14px 
+        margin-bottom: 10px
+    select 
+        width: 100%
+        height: 40px
+        border: 1px solid $grey
+        border-radius: 10px
+        padding: 0 10px
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background: url('../img/down.svg')
+        background-repeat: no-repeat
+        background-position: right 10px center
+        outline: none
+
+
+//end filter modal
+
 @import "media"
 
 
