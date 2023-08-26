@@ -588,6 +588,7 @@ swiper-slide
     border-top-right-radius: 30px
     position: absolute 
     bottom: 0 
+    width: 100%
     left: 50%
     transform: translateY(100%) translateX(-50%)
     transition: all 1s
@@ -799,9 +800,54 @@ swiper-slide
         background-repeat: no-repeat
         background-position: right 10px center
         outline: none
-
-
 //end filter modal
+
+//start ads style 
+.ads-wrapper
+    display: flex 
+    flex-direction: column 
+    align-items: center
+    padding-top: 20px
+    padding-bottom: 20px
+    width: 100%
+.ads 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    margin-left: auto 
+    margin-right: auto
+    width: 160px
+.ads__photo2 
+    width: 70px 
+    height: 70px 
+    border-radius: 50% 
+    object-fit: cover 
+    object-position: center  
+    min-height: 100px
+    min-width: 100px
+    z-index: 999 
+    position: relative
+.ads__photo1,
+.ads__photo3
+    width: 70px 
+    height: 70px
+    border-radius: 50% 
+    object-fit: cover 
+    object-position: center
+    min-height: 70px
+    min-width: 70px
+.ads__photo1
+    transform: translateX(20%)
+.ads__photo3
+    transform: translateX(-20%)
+.ads__text
+    text-align: center
+    width: 280px 
+    margin-left: auto 
+    margin-right: auto
+    margin-top: 10px 
+    margin-bottom: 20px
+//end ads style
 
 @import "media"
 
