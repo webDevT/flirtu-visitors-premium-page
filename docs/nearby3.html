@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
     />
+       <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
@@ -772,7 +773,7 @@ have
         </div>
 
 
-        <div class="age-modal-wrapper">
+        < <div class="age-modal-wrapper">
           <div class="container">
 
             <img src="img/back-black.svg" alt="" class="back-md">
@@ -780,67 +781,21 @@ have
             <div class="sub-modal-header">
 
               <div class="sub-modal-title">
-               Age
-              </div>
-            </div>
-
-            <div class="age-selects-row">
-
-              <div class="select-wrapper">
-                <label for="">Minimum</label>
-              <select name="" id="">
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option>
-                <option value="">31</option>
-                <option value="">32</option>
-                <option value="">33</option>
-                <option value="">34</option>
-                <option value="">35</option>
-                <option value="">36</option>
-                <option value="">37</option>
-                <option value="">35</option>
-              </select>
-              </div>
-
-              <div class="select-wrapper">
-                <label for="">Maximum</label>
-              <select name="" id="">
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option>
-                <option value="">31</option>
-                <option value="">32</option>
-                <option value="">33</option>
-                <option value="">34</option>
-                <option value="">35</option>
-                <option value="">36</option>
-                <option value="">37</option>
-                <option value="">35</option>
-              </select>
-              </div>
+               Age (years)
               
+              </div>
             </div>
+
+            <div class="range-wrapper"><div class="range-inputs">
+            
+            <div>from <input type="text" id="min" readonly ></div>
+            <div>to <input type="text" id="max" readonly ></div>
+        						  	 </div>
+        						  	 
+            
+<div id="slider-range"></div></div>
+
+            
 
 
 
@@ -948,5 +903,24 @@ $('.chat__button').click(function(){
   });
 });
     </script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 18,
+      max: 99,
+      values: [18, 99 ],
+      slide: function( event, ui ) {
+        $( "#min" ).val(ui.values[ 0 ]);
+        $( "#max" ).val(ui.values[ 1 ] );
+      }
+    });
+    $( "#min" ).val($( "#slider-range" ).slider( "values", 0 ));
+     $( "#max" ).val($( "#slider-range" ).slider( "values", 1 ) );
+  } );
+          
+</script>
   </body>
 </html>
