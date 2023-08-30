@@ -14,9 +14,53 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
     />
+    <link href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
+  <style>
+  #min, #max {
+      position: absolute;
+      display: block;
+      width: 60px;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      color: #017DF8;
+ 
+    }
+    #max {
+        left: 100%;
+        
+    }
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+        background: linear-gradient(210deg, #017DF8 0%, #8A14F5 100%);
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .ui-slider .ui-slider-range {
+        background: linear-gradient(210deg, #017DF8 0%, #8A14F5 100%);
+       
+    }
+    .ui-widget.ui-widget-content {
+        border: none;
+        background: lightgrey;
+        height: 4px;
+    }
+   
 
+   
+  </style>
   <body>
     <div class="content">
       <div class="nearby__page">
@@ -33,7 +77,7 @@
                 <img src="img/priority-black.svg" alt="">
             </div>
 
-            <a href="premium.html" class="nearby__button chat__button">
+            <a href="premium-plus.html" class="nearby__button chat__button">
               <img src="img/icon1.svg" alt=""> <div class="chat-button-value">1</div>
           </a>
 
@@ -778,67 +822,17 @@ have
             <div class="sub-modal-header">
 
               <div class="sub-modal-title">
-               Age
+               Age <br>
+               (from - to)
               </div>
             </div>
 
-            <div class="age-selects-row">
-
-              <div class="select-wrapper">
-                <label for="">Minimum</label>
-              <select name="" id="">
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option>
-                <option value="">31</option>
-                <option value="">32</option>
-                <option value="">33</option>
-                <option value="">34</option>
-                <option value="">35</option>
-                <option value="">36</option>
-                <option value="">37</option>
-                <option value="">35</option>
-              </select>
-              </div>
-
-              <div class="select-wrapper">
-                <label for="">Maximum</label>
-              <select name="" id="">
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option>
-                <option value="">31</option>
-                <option value="">32</option>
-                <option value="">33</option>
-                <option value="">34</option>
-                <option value="">35</option>
-                <option value="">36</option>
-                <option value="">37</option>
-                <option value="">35</option>
-              </select>
-              </div>
-              
+            <div class="range-wrapper">
+<div id="slider-range"></div>
+        						  	 <input type="text" id="min" readonly >
+        						  	 <input type="text" id="max" readonly >
             </div>
+            
 
 
 
@@ -946,5 +940,70 @@ $('.chat__button').click(function(){
   });
 });
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+$( "#slider-range" ).slider({
+          range: true,
+          min: 18,
+          max: 99,
+          values: [ 18, 99 ],
+          slide: function( event, ui ) {
+            $( "#min" ).val(ui.values[ 0 ] + "y.");          
+            $( "#max" ).val( ui.values[ 1 ] + "y.");
+          // set style based on touched rangeslider handle
+          if (ui.values.indexOf(ui.value) === 0) {
+            $( "#min" ).css({
+              'left': ui.handle.style.left,
+              'z-index': 1,
+            });
+            $( "#max" ).css({
+              'z-index': 0,
+             
+            });
+          }
+          if (ui.values.indexOf(ui.value) === 1) {
+            $( "#max" ).css({
+              'left': ui.handle.style.left,
+              'z-index': 0,
+            });
+            $( "#min" ).css({
+              'z-index': 0,
+
+            });
+          } 
+          },
+          stop: function( event, ui ) {
+            $( "#min" ).val(ui.values[ 0 ] + "y.");          
+            $( "#max" ).val( ui.values[ 1 ] + "y." );
+          // set style based on touched rangeslider handle
+          if (ui.values.indexOf(ui.value) === 0) {
+            $( "#min" ).css({
+              'left': ui.handle.style.left,
+              'z-index': 1,
+            });
+            $( "#max" ).css({
+              'z-index': 0,
+            });
+          }
+          if (ui.values.indexOf(ui.value) === 1) {
+            $( "#max" ).css({
+              'left': ui.handle.style.left,
+              'z-index': 0,
+            });
+            $( "#min" ).css({
+              'z-index': 0,
+            });
+          } 
+          }
+        });
+        $( "#min" ).val($( "#slider-range" ).slider( "values", 0 ) + "y.");
+       	$( "#max" ).val($( "#slider-range" ).slider( "values", 1 )  + "y.");
+          
+</script>
+
   </body>
 </html>
