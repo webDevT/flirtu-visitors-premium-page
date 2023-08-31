@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app"
+    "\\app",
+    "\\app\\sass"
   ],
-  "SelectedNode": "\\app\\index.html",
+  "SelectedNode": "\\app\\sass\\style.sass",
   "PreviewInSolutionExplorer": false
 }
