@@ -527,7 +527,15 @@
     ></script>
 
     <script>
-      $(".slider-for").slick({
+      $(document).ready(function(){
+
+        $('.slider-for').on('init', function () {
+            $('.slider-for').css('marginLeft', '0')
+        });
+
+
+
+ $(".slider-for").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -555,6 +563,8 @@
         prevArrow: $(".prev-arrow"),
         nextArrow: $(".next-arrow"),
       });
+      })
+     
     </script>
   </body>
 </html>
