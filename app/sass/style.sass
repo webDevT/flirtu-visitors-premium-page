@@ -118,7 +118,7 @@ p
 //start premium page style
 .premium-page 
     height: 100%
-    background: linear-gradient(180deg, #0061C1 0%, #6310AE 100%)
+    // background: linear-gradient(180deg, #0061C1 0%, #6310AE 100%)
     width: 680px
     max-width: 100%
     margin-left: auto 
@@ -126,7 +126,7 @@ p
     position: relative
     min-height: 100vh
     padding-bottom: 150px
-    color: #fff
+    
 .plans-page 
     height: 100%
     width: 680px
@@ -135,7 +135,7 @@ p
     margin-right: auto
     position: relative
     min-height: 100vh
-    padding-bottom: 30px
+    padding-bottom: 80px
 .premium__header
     text-align: center
     padding-top: 24px 
@@ -160,7 +160,7 @@ p
     display: flex 
     justify-content: center 
     align-items: center
-    background: linear-gradient(210deg, #017DF8 0%, #8A14F5 100%)
+    background: $green
     margin-bottom: 11px
 .slick-dots
     margin: 0
@@ -181,13 +181,13 @@ p
         background: transparent
         width: 10px 
         height: 10px 
-        border: 1px solid #fff 
+        border: 1px solid $green
         border-radius: 50%
         padding: 0
         margin: 0 3px
         cursor: pointer
     .slick-active button
-        background: linear-gradient(180deg, #DFBC77 0%, #FFF 100%)
+        background: $green
         border: none
 .option-title
     font-size: 24px 
@@ -195,18 +195,20 @@ p
     margin-bottom: 0px
 .option__text
     font-size: 16px
-    color: #fff
+    color: #323235
     margin-top: 5px
 .plans-slider-wrapper
     padding-top: 30px
 
 .plan-item   
     width: 170px  
-    height: 250px
+    height: 210px
     border-radius: 10px
-    background: rgba(#0061C1, 0.60)
+    background: #fff
     padding: 20px 5px
+    padding-top: 25px
     cursor: pointer
+    border: 2px solid #d8d8d8
 .plans-slider
     .slick-list 
         padding-top: 20px
@@ -219,7 +221,7 @@ p
     margin-bottom: 0px
 .plan-item__title
     font-size: 30px
-    margin-bottom: 5px
+    margin-bottom: 10px
 .prev-price
     min-height: 25px
 .price
@@ -231,7 +233,7 @@ p
     opacity: 0.5
     text-decoration: line-through
 .plan-item.active 
-    border: 2px solid #DFBC77
+    border: 2px solid $green
 .plan-item
     position: relative
 .plan-item__label
@@ -263,12 +265,13 @@ p
     left: 50% 
     transform: translateX(-50%)
     width: 640px
+
 //end premium page style
 
 //start premium tabs 
 .premium-tabs
     width: 100% 
-    border-bottom: 1px solid rgba(#fff, 0.7)
+    border-bottom: 1px solid rgba($green, 0.7)
     margin-bottom: 15px
     display: flex
 .premium-tab
@@ -279,7 +282,7 @@ p
     cursor: pointer
 .premium-tab.active 
     font-weight: 500
-    border-bottom: 1px solid #fff
+    border-bottom: 1px solid $green
 //end premium tabs 
 // .premium__header span.active 
 //    display: none
@@ -371,8 +374,8 @@ p
 .slider-nav__header-title
     color: #969596  
 .plan-feature
-    padding-top: 20px 
-    padding-bottom: 20px
+    padding-top: 10px 
+    padding-bottom: 10px
     border-bottom: 2px dashed #e2e1e3
     display: flex 
     align-items: center
@@ -420,7 +423,7 @@ p
 .icons-wrapper
     display: flex
     flex-wrap: wrap
-    width: 160px
+    width: 110px
     margin-bottom: 5px
     justify-content: center
     .option-icon 
@@ -448,9 +451,12 @@ p
 .slick-dots .slick-active button
     outline: none
 .note
+    color: #ABABAB
+    margin-top: 150px
     a,
     a:hover 
-        color: #fff
+        color: #ABABAB
+
 swiper-slide
     align-items: center
 swiper-slide img
@@ -484,11 +490,7 @@ swiper-slide
     .option__text 
         color: rgba(#000, .6)
     .button--gold
-        background: $green
-        color: #fff
-    .plan-item__label
-        background: $green 
-        color: #fff
+        background: linear-gradient(#F6F5F5, #D9D9D9)
     .slick-dots button 
         border: 1px solid $green
     .slick-dots .slick-active button
@@ -930,6 +932,8 @@ html .ui-button.ui-state-disabled:active
 swiper-container
     display: flex
     justify-content: center
+.tick-wrapper .tick:nth-child(2)
+    width: 55px
 @import "media"
 
 
