@@ -92,7 +92,7 @@
                     <div class="plan-feature__icon">
                      
                     </div>
-                    See who liked you
+                    See who Likes You
                   </div>
 
                   <div class="tick-wrapper">
@@ -251,6 +251,7 @@
             <!-- <a href="" class="button--blue button premium-button">
               Get Premium Plus
             </a> -->
+           
           </div>
         </div>
          <!-- end slider nav item -->
@@ -276,7 +277,7 @@
                     <div class="plan-feature__icon">
                      
                     </div>
-                    See who liked you
+                    See who Likes You
                   </div>
 
                   <div class="tick-wrapper">
@@ -438,6 +439,7 @@
           <!-- <a href="" class="button--blue button premium-button">
             Get Premium
           </a> -->
+        
         </div>
          <!-- end slider nav item -->
        
@@ -447,12 +449,21 @@
 
         
       </div>
-    </div>
-    <div class="button-wrapper">
-      <div class="container">
-        <a href="" class="button button--gold"> Continue </a>
+
+      <div class="button-wrapper button-wrapper--2 active button-wrapper--2-two">
+        <div class="container">
+          <a href="" class="button button--gold"> Upgrade from 14.99 €</a>
+        </div>
       </div>
+
+      <div class="button-wrapper button-wrapper--2 button-wrapper--2-first">
+        <div class="container">
+          <a href="" class="button button--gold"> Upgrade from 9.99 €</a>
+        </div>
+      </div>
+
     </div>
+ 
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -478,12 +489,13 @@
         arrows: false,
         centerMode: true,
         asNavFor: ".slider-nav",
-        infinite: false,  
+        infinite: false, 
+        dots: true, 
         responsive: [
           {
             breakpoint: 680,
             settings: {
-              centerPadding: "4vw",
+              centerPadding: "6vw",
             },
           },
         ],
@@ -502,6 +514,14 @@
       });
       })
      
+
+      $('.slider-for').on('afterChange', function(event, slick, currentSlide){
+  		if (currentSlide == 1) {
+	 		$('.button-wrapper--2-first').addClass('active');
+  		}else {
+  			$('.button-wrapper--2-first').removeClass('active');
+  		};
+	});
     </script>
   </body>
 </html>
